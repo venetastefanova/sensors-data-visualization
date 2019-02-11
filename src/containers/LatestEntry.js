@@ -13,7 +13,7 @@ import {
 import * as actions from "../store/actions/actions";
 import { connect } from "react-redux";
 
-class LastEntry extends Component {
+class LatestEntry extends Component {
   state = {
     useCanvas: false
   };
@@ -22,9 +22,9 @@ class LastEntry extends Component {
   }
 
   render() {
-    const labelData = this.props.entries.map((d, idx) => ({
+    const labelData = this.props.entry.map((d, idx) => ({
       x: d.x,
-      y: Math.max(this.props.entries[idx].y)
+      y: Math.max(this.props.entry[idx].y)
     }));
     const { useCanvas } = this.state;
     const BarSeries = useCanvas ? VerticalBarSeriesCanvas : VerticalBarSeries;
@@ -38,7 +38,7 @@ class LastEntry extends Component {
           <YAxis />
           <BarSeries
             className="vertical-bar-series-example"
-            data={this.props.entries}
+            data={this.props.entry}
           />
           <LabelSeries data={labelData} getLabel={d => d.x} />
         </XYPlot>
@@ -50,7 +50,7 @@ class LastEntry extends Component {
 //returns JS object that we map to property of the state
 const mapStateToProps = state => {
   return {
-    entries: state.entries // comes from redux
+    entry: state.latestEntry // comes from redux
   };
 };
 
@@ -59,4 +59,4 @@ const mapDispatchToProps = dispatch => {
     onInitData: () => dispatch(actions.initData())
   };
 };
-export default connect(mapStateToProps,mapDispatchToProps)(LastEntry);
+export default connect(mapStateToProps,mapDispatchToProps)(LatestEntry);
