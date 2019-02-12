@@ -1,11 +1,61 @@
-
-/* .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Content {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  left: 0%;
+  transform: translate(0%, -50%);
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-} */
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.LatestEntry {
+  align-self: flex-end;
+}
+.rv-xy-plot__axis__tick__text {
+  font-size: 14px !important;
+}
+.App {
+  height: 100%;
+}
+
+.LatestEntry,
+.TodayStatistics {
+  align-self: center;
+}
+@media (max-width: 991px) {
+  .Content {
+    margin: 20% 0 30% 0;
+  }
+}
+@media (max-width: 1199px) {
+  .Content {
+    height: 100%;
+    z-index: -99;
+  }
+  .rv-xy-plot {
+    height: auto !important;
+  }
+  .LatestEntry {
+    height: auto;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1600px) {
+  .rv-xy-plot {
+    height: auto !important;
+  }
+}
+
+@media (max-width: 700px) {
+  h1 {
+    margin: 0;
+    font-size: 25px;
+  }
+  .rv-xy-plot {
+    position: relative;
+    margin: 0 auto;
+    width: 100% !important;
+  }
+}

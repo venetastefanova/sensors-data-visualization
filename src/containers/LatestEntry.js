@@ -28,10 +28,10 @@ class LatestEntry extends Component {
     }));
     const { useCanvas } = this.state;
     const BarSeries = useCanvas ? VerticalBarSeriesCanvas : VerticalBarSeries;
-
     return (
-      <div>
-        <XYPlot xType="ordinal" width={600} height={600} xDistance={100}>
+      <div className="LatestEntry">
+        <h2>Latest entry from the last hour</h2>
+        <XYPlot xType="ordinal" width={450} height={500} xDistance={100}>
           <VerticalGridLines />
           <HorizontalGridLines />
           <XAxis />
@@ -59,4 +59,7 @@ const mapDispatchToProps = dispatch => {
     onInitData: () => dispatch(actions.initData())
   };
 };
-export default connect(mapStateToProps,mapDispatchToProps)(LatestEntry);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(LatestEntry);

@@ -11,16 +11,13 @@ export const getSensorDataToday = (dataEntries, sensorName) => {
         });
       })
       .filter(obj => {
-        // return new Date(obj.x).getDate() === new Date().getDate() && new Date(obj.x).toLocaleString("fi-FI", {timeZone: "Europe/Helsinki"})
         return new Date(obj.x).getDate() === new Date().getDate();
       })
       .map(obj2 => {
         return (todaySensorOne = {
-          // x: obj2.x.split("T")[1].split(":")[0],
           x: new Date(obj2.x).getHours(),
           y: obj2.y
         });
       }));
-    //console.log(sensorOne);
   }
 };

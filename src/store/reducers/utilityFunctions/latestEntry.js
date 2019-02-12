@@ -4,7 +4,7 @@ export const getLatestEntry = (sensorsEntry) => {
     //create object for each sensor and puts them in an array
     for (var entry in dataEntry) {
       if (dataEntry.hasOwnProperty(entry)) {
-        let latestFeed = {};
+        let latestFeed ={};
         var currentEntry = Object.keys(dataEntry).map(entry => {
           return (latestFeed = {
             x: entry,

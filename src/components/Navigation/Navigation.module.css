@@ -1,0 +1,27 @@
+.Wrapper {
+  height: 100px;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  color: white;
+  font-family: Lato, Sans-serif;
+  justify-content: space-around;
+  height: 10%;
+}
+
+.Logo {
+  height: 50px;
+  width: 110px;
+}
+
+@media (max-width: 700px) {
+  .Wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+}
