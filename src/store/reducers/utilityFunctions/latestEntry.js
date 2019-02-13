@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 export const getLatestEntry = (sensorsEntry) => {
     var dataEntry = sensorsEntry.pop();
     // strip data so it is compatible for the graph values

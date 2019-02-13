@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 export const getSensorDataToday = (dataEntries, sensorName) => {
   for (var singleEntry in dataEntries) {
     let todaySensorOneEntries = {};

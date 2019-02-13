@@ -5,5 +5,4 @@
 * `React`
 * `Redux`
 * `react-vis` to make the graphs
-* `Docker`
-* Deployed in Digital Ocean
+* Deployed in [Heroku](http://sensors-data-visualization.herokuapp.com/) 
