@@ -11,13 +11,13 @@ export const getSensorDataToday = (dataEntries, sensorName) => {
           y: dataEntries[sensor][sensorName]
         });
       })
-      .filter(obj => {
-        return new Date(obj.x).getDate() === new Date().getDate();
+      .filter(sensorDate => {
+        return new Date(sensorDate.x).getDate() === new Date().getDate();
       })
-      .map(obj2 => {
+      .map(sensorDateValue => {
         return (todaySensorOne = {
-          x: new Date(obj2.x).getHours(),
-          y: obj2.y
+          x: new Date(sensorDateValue.x).getHours(),
+          y: sensorDateValue.y
         });
       }));
   }

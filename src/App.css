@@ -59,3 +59,8 @@
     width: 100% !important;
   }
 }
+@media (max-width: 575.98px) { 
+  .LatestEntry, .TodayStatistics{
+    width: 300px !important;
+  }
+}
