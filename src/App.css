@@ -63,4 +63,11 @@
   .LatestEntry, .TodayStatistics{
     width: 300px !important;
   }
+  .Content{
+    margin:40% 0 0 0;
+  }
+  .TodayStatistics{
+    height: 100vh;
+    margin-bottom: 100px;
+  }
 }
